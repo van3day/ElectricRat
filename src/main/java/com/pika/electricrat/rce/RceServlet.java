@@ -35,7 +35,7 @@ public class RceServlet extends BaseServlet {
         bash_cmd1.add("/bin/sh");
         bash_cmd1.add("-c");
         bash_cmd1.add(cmd);
-        Process p = Runtime.getRuntime().exec(bash_cmd.toArray(new String[bash_cmd1.size()]));
+        Process p = Runtime.getRuntime().exec(bash_cmd1.toArray(new String[bash_cmd1.size()]));
         InputStream is = p.getInputStream();
         BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
         String line;
